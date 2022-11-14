@@ -1,0 +1,102 @@
+.admin-container {
+  display: grid;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar nav nav nav"
+    "sidebar main main main";
+}
+
+main {
+  background: #f3f4f6;
+  grid-area: main;
+  overflow-y: auto;
+}
+
+.sidebar {
+  background: #121212;
+  grid-area: sidebar;
+  overflow-y: auto;
+  padding: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.sidebar-tab {
+  color: white;
+  cursor: pointer;
+}
+.active {
+  background-color: aqua;
+}
+
+.sidebar-img > img {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  object-fit: contain;
+}
+.admin-title {
+  color: black;
+}
+.admin-Navbar {
+  grid-area: nav;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding: 16px;
+  color: black;
+  align-items: center;
+}
+
+.admin-Navbar-Link {
+  padding-right: 8px;
+}
+.admin-Navbar-Items {
+  display: none;
+}
+.admin-Navbar-Items--right {
+  margin-left: auto;
+  display: flex;
+}
+.admin-Navbar-Link-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .admin-Navbar-Items,
+  .admin-Navbar {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  .admin-Navbar-Items {
+    display: none;
+  }
+  .admin-Navbar-Items--right {
+    margin-left: 0;
+  }
+  .admin-Navbar-ToggleShow {
+    display: flex;
+    margin-top: 23px;
+  }
+  .admin-Navbar-Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 978px) {
+  .admin-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "nav"
+      "main";
+  }
+
+  .sidebar {
+    display: none;
+  }
+}

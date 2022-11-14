@@ -1,0 +1,37 @@
+.success-checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px;
+  background-color: white;
+}
+
+.success-checkout-image {
+  width: 70px;
+  object-fit: contain;
+  margin-bottom: 22px;
+  background-color: black;
+}
+
+.success-checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-checkout-btn {
+  margin-top: 24px;
+  font-size: 12px;
+  padding: 0px 22px;
+  border: solid 1px rgb(1, 0, 0);
+  border-radius: 4px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}

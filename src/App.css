@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(10, 10, 10);
+  margin: 0;
+  font-family: Poppins, Arial;
+  font-size: 14px;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(35, 35, 35);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(89, 89, 89);
+  border-radius: 4px;
+}
+
+input,
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

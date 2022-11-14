@@ -1,0 +1,10 @@
+.player-img {
+  width: 100px;
+  transition: 0.2s;
+}
+.player-img:hover {
+  width: 100px;
+  transform: scale(1.4);
+}
+
+/* sda */

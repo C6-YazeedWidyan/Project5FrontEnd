@@ -1,0 +1,67 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.upper-footer{
+    display:grid;
+    grid-template-columns: repeat(3, 20%);
+    justify-content: space-evenly;
+    background-color: #0047ab;
+    color: white;
+}
+.f-logo{
+
+}
+.f-contact-us{
+
+}
+.f-follow-us{
+    display: flex;
+    flex-direction: column;
+}
+.f-social-icons-container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    /* background-color: white; */
+    padding: 0.1em;
+    margin-bottom: 1em;
+}
+.link-to-contact{
+    color: white;
+}
+/* .social-networks-icons{
+    display: flex;
+} */
+.social-networks-icons{
+    margin-right: 5px;
+    color: blue  ;
+}
+.paragraphs-infos{
+    text-transform: capitalize;
+    font-size: 1em;
+}
+.footer-title{
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+@media  (max-width: 600px) {
+    .upper-footer{
+        display:grid;
+        grid-template-columns: repeat(1, 30%);
+        justify-content: space-evenly;
+        background-color: #0047ab;
+        color: white;
+    }
+} 
+@media  (min-width: 600px) and (max-width:900px) {
+    .upper-footer{
+        display:grid;
+        grid-template-columns: repeat(2, 30%);
+        justify-content: space-evenly;
+        background-color: #0047ab;
+        color: white;
+    }
+}

@@ -1,0 +1,39 @@
+.dashboard-container {
+  margin: 0 auto;
+  width: 95%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.06);
+}
+
+.total-text {
+  color: gray;
+  font-size: 18px;
+}
+
+.total-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dashboard-card-image {
+  width: 60px;
+  object-fit: contain;
+}
+
+@media (min-width: 268px) and (max-width: 768px) {
+}

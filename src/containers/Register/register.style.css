@@ -1,0 +1,65 @@
+.register-container {
+  padding: 30px;
+  margin: 0 auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: rgb(32, 32, 32);
+  color: rgb(243, 243, 243);
+  z-index: 1;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.auth-input {
+  border-radius: 4px;
+  padding: 16px 70px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 16px;
+  background-color: rgb(32, 32, 32);
+  border: solid rgba(245, 245, 245, 0.6) 1px;
+}
+.auth-input::placeholder {
+  color: rgba(245, 245, 245, 0.6);
+}
+.register-btn {
+  padding: 4px 40px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: #0047ab;
+  text-align: center;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.succes-msg {
+  margin-top: 10px;
+  color: rgb(33, 220, 33);
+}
+
+.error-msg {
+  margin-top: 10px;
+  color: rgb(251, 0, 0);
+}
+
+@media (min-width: 268px) and (max-width: 767px) {
+  .register-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .register-container {
+    width: 75%;
+  }
+}
