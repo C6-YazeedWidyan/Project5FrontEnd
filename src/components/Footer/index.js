@@ -21,7 +21,7 @@ const Footer = () => {
           <p className="paragraphs-infos">Phone : 012 3456 789</p>
           <a
             className="link-to-contact"
-            href={"http://localhost:3000/contactUs"}
+            href={"https://bluelockgeeks.onrender.com/contactUs"}
           >
             Click here to write us
           </a>
