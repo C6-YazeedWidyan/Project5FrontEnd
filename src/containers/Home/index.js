@@ -45,27 +45,27 @@ const Home = () => {
       });
   };
 
-  const getWomenItems = () => {
-    axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/2`)
-      .then((data) => {
-        dispatch(setWomenProducts(data.data.result));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const getWomenItems = () => {
+  //   axios
+  //     .get(`https://bluelockgeeks.onrender.com/product/catgory/2`)
+  //     .then((data) => {
+  //       dispatch(setWomenProducts(data.data.result));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
-  const getKidsItems = () => {
-    axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/3`)
-      .then((data) => {
-        dispatch(setKidsProducts(data.data.result));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const getKidsItems = () => {
+  //   axios
+  //     .get(`https://bluelockgeeks.onrender.com/product/catgory/3`)
+  //     .then((data) => {
+  //       dispatch(setKidsProducts(data.data.result));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   const addToCart = (e, id, product) => {
     e.stopPropagation();
@@ -106,8 +106,8 @@ const Home = () => {
 
   useEffect(() => {
     getMenItems();
-    getWomenItems();
-    getKidsItems();
+    // getWomenItems();
+    // getKidsItems();
 
     if (token && cart.length === 0) {
       console.log("yazeed ssssssssss");
