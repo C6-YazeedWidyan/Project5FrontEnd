@@ -41,7 +41,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/${location.state}`)
+      .get(`https://bluelockgeeks.onrender.com/product/${location.state}`)
       .then((res) => {
         setProduct(res.data.product.rows[0]);
         setInStock(res.data.product.rows[0].in_stock);
@@ -69,7 +69,7 @@ const ProductDetails = () => {
     };
 
     axios
-      .post(`http://localhost:5000/wishlist`, data, {
+      .post(`https://bluelockgeeks.onrender.com/wishlist`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -89,7 +89,7 @@ const ProductDetails = () => {
     };
 
     axios
-      .post(`http://localhost:5000/cart`, data, {
+      .post(`https://bluelockgeeks.onrender.com/cart`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -112,7 +112,7 @@ const ProductDetails = () => {
   };
   const deleteFromWishList = (id) => {
     axios
-      .delete(`http://localhost:5000/wishlist/${id}`, {
+      .delete(`https://bluelockgeeks.onrender.com/wishlist/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -128,7 +128,7 @@ const ProductDetails = () => {
 
   const deleteFromCart = (id) => {
     axios
-      .delete(`http://localhost:5000/cart/${id}`, {
+      .delete(`https://bluelockgeeks.onrender.com/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

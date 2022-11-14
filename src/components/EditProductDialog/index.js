@@ -21,13 +21,16 @@ const EditProductDialog = ({
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     axios
-      .put(`http://localhost:5000/product/update/${productDetails.id}`, {
-        title,
-        price,
-        img,
-        descriptions,
-        in_stock,
-      })
+      .put(
+        `https://bluelockgeeks.onrender.com/product/update/${productDetails.id}`,
+        {
+          title,
+          price,
+          img,
+          descriptions,
+          in_stock,
+        }
+      )
       .then((res) => {
         dispatch(updateProducts(res.data.result));
         setIsEdit(false);

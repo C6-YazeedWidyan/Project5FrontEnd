@@ -30,7 +30,7 @@ const Login = () => {
     // console.log(response.tokenId);
 
     axios
-      .post("http://localhost:5000/user/google", {
+      .post("https://bluelockgeeks.onrender.com/user/google", {
         firstName: response.wt.rV,
         lastName: response.wt.uT,
         email: response.wt.cu,
@@ -42,7 +42,7 @@ const Login = () => {
         dispatch(setUserType(1));
 
         axios
-          .get("http://localhost:5000/cart", {
+          .get("https://bluelockgeeks.onrender.com/cart", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -56,7 +56,7 @@ const Login = () => {
           });
 
         axios
-          .get("http://localhost:5000/wishlist", {
+          .get("https://bluelockgeeks.onrender.com/wishlist", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -94,7 +94,7 @@ const Login = () => {
   const addNewUserByGoogle = () => {
     console.log("test");
     axios
-      .post("http://localhost:5000/user/google", {
+      .post("https://bluelockgeeks.onrender.com/user/google", {
         firstName,
         lastName,
         email: emailgoogle,
@@ -108,7 +108,7 @@ const Login = () => {
   };
   const login = () => {
     axios
-      .post("http://localhost:5000/login", {
+      .post("https://bluelockgeeks.onrender.com/login", {
         email,
         password,
       })
@@ -118,7 +118,7 @@ const Login = () => {
         dispatch(setUserType(result.data.role));
 
         axios
-          .get("http://localhost:5000/cart", {
+          .get("https://bluelockgeeks.onrender.com/cart", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -132,7 +132,7 @@ const Login = () => {
           });
 
         axios
-          .get("http://localhost:5000/wishlist", {
+          .get("https://bluelockgeeks.onrender.com/wishlist", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -158,7 +158,7 @@ const Login = () => {
   };
   const googlelogin = () => {
     axios
-      .post("http://localhost:5000/login/google", {
+      .post("https://bluelockgeeks.onrender.com/login/google", {
         email: emailgoogle,
         password: 123,
       })

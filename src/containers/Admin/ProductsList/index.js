@@ -25,11 +25,14 @@ const ProductsList = () => {
 
   const getAllProducts = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/product`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        `https://bluelockgeeks.onrender.com/product`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       if (res.data.success) {
         dispatch(setProducts(res.data.result));
         setMessage("");
@@ -50,7 +53,7 @@ const ProductsList = () => {
 
   const deleteProduct = (id) => {
     axios
-      .delete(`http://localhost:5000/product/delete/${id}`)
+      .delete(`https://bluelockgeeks.onrender.com/product/delete/${id}`)
       .then((res) => {
         dispatch(deleteFromProducts(id));
       })
