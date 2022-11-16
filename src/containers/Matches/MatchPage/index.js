@@ -10,9 +10,11 @@ const MatchPage = () => {
 
   const location = useLocation();
 
+
+     
   useEffect(() => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/match/number/${location.state}`)
+      .get(`http://localhost:5000/match/number/${location.state}`)
       .then((res) => {
         setMatch(res.data.result[0]);
         console.log(res.data.result);

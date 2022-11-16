@@ -12,9 +12,7 @@ const Search = () => {
   const getData = (key) => {
     setKeyword(key);
     axios
-      .get(
-        `https://bluelockgeeks.onrender.com/product/search/product?keyword=${keyword}`
-      )
+      .get(`http://localhost:5000/product/search/product?keyword=${keyword}`)
       .then((res) => {
         setSearchResult(res.data.result.slice(0, 3));
       })

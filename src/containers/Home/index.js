@@ -36,7 +36,7 @@ const Home = () => {
 
   const getMenItems = () => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/1`)
+      .get(`http://localhost:5000/product/catgory/1`)
       .then((data) => {
         dispatch(setMenProducts(data.data.result));
       })
@@ -47,7 +47,7 @@ const Home = () => {
 
   const getWomenItems = () => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/2`)
+      .get(`http://localhost:5000/product/catgory/2`)
       .then((data) => {
         dispatch(setWomenProducts(data.data.result));
       })
@@ -58,7 +58,7 @@ const Home = () => {
 
   const getKidsItems = () => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/3`)
+      .get(`http://localhost:5000/product/catgory/3`)
       .then((data) => {
         dispatch(setKidsProducts(data.data.result));
       })
@@ -75,7 +75,7 @@ const Home = () => {
     };
 
     axios
-      .post(`https://bluelockgeeks.onrender.com/cart`, data, {
+      .post(`http://localhost:5000/cart`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -91,7 +91,7 @@ const Home = () => {
   const deleteFromCart = (e, id) => {
     e.stopPropagation();
     axios
-      .delete(`https://bluelockgeeks.onrender.com/cart/${id}`, {
+      .delete(`http://localhost:5000/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -112,7 +112,7 @@ const Home = () => {
     if (token && cart.length === 0) {
       console.log("yazeed ssssssssss");
       axios
-        .get("https://bluelockgeeks.onrender.com/cart", {
+        .get("http://localhost:5000/cart", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -129,7 +129,7 @@ const Home = () => {
     if (token && wishlist.length === 0) {
       console.log("yazeed fffffffffff");
       axios
-        .get("https://bluelockgeeks.onrender.com/wishlist", {
+        .get("http://localhost:5000/wishlist", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

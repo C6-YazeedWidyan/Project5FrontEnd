@@ -11,10 +11,7 @@ const Checkout = () => {
 
   const handleCheckout = () => {
     axios
-      .post(
-        "https://bluelockgeeks.onrender.com/payment/create-checkout-session",
-        cart
-      )
+      .post("http://localhost:5000/payment/create-checkout-session", cart)
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
@@ -29,9 +26,10 @@ const Checkout = () => {
     handleCheckout();
   }, []);
 
+  console.log("yaz");
   return (
     <>
-      <div></div>;
+      <div className="checkout"></div>;
     </>
   );
 };

@@ -8,44 +8,44 @@ const AddNewProduct = () => {
   const [descriptions, setdescriptions] = useState("");
   const [category_id, setcategory_id] = useState(0);
   const [img, setimg] = useState("");
-  const [url, setUrl] = useState("");
+  const [ url, setUrl ] = useState("");
   const [price, setprice] = useState(0);
-  const [message, setmessage] = useState("");
+  const [message, setmessage] = useState('')
   console.log(url);
   const addProduct = () => {
     axios
-      .post(`https://bluelockgeeks.onrender.com/product/add`, {
+      .post(`http://localhost:5000/product/add`, {
         title,
         descriptions,
         category_id,
-        img: url,
+        img:url,
         price,
       })
       .then((result) => {
         console.log(result.data.massage);
-        setmessage(result.data.massage);
+        setmessage(result.data.massage)
       })
       .catch((err) => {
         console.log(err.message);
-        setmessage(err.message);
+        setmessage(err.message)
       });
   };
 
-  const uploadImage = () => {
-    const data = new FormData();
-    data.append("file", img);
-    data.append("upload_preset", "sportblue");
-    data.append("cloud_name", "dt8h9hj39");
-    fetch(" https://api.cloudinary.com/v1_1/dt8h9hj39/image/upload", {
-      method: "post",
-      body: data,
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setUrl(data.url);
-      })
-      .catch((err) => console.log(err));
-  };
+const uploadImage = () => {
+const data = new FormData()
+data.append("file", img)
+data.append("upload_preset", "sportblue")
+data.append("cloud_name","dt8h9hj39")
+fetch(" https://api.cloudinary.com/v1_1/dt8h9hj39/image/upload",{
+method:"post",
+body: data
+})
+.then(resp => resp.json())
+.then(data => {
+setUrl(data.url)
+})
+.catch(err => console.log(err))
+}
 
   // const uploadImg = async (e) => {
   //   const file = e.target.files[0];
@@ -69,24 +69,21 @@ const AddNewProduct = () => {
       <div className="add-new-product-contianer">
         <p>new product</p>
         <br />
-        <input
-          className="add-new-product-input"
+        <input className="add-new-product-input"
           onChange={(e) => {
             settitle(e.target.value);
           }}
           type="text"
           placeholder="title"
         />
-        <textarea
-          className="add-new-product-textarea"
+        <textarea className="add-new-product-textarea"
           onChange={(e) => {
             setdescriptions(e.target.value);
           }}
           type="text"
           placeholder="description"
         />
-        <input
-          className="add-new-product-input"
+        <input className="add-new-product-input"
           onChange={(e) => {
             setcategory_id(e.target.value);
           }}
@@ -100,13 +97,11 @@ const AddNewProduct = () => {
           type="file"
           required
           onChange={(e) => {
-            // uploadImg(e);
-            setimg(e.target.files[0]);
+           // uploadImg(e);
+            setimg(e.target.files[0])
           }}
         />
-        <button className="add-new-product-button" onClick={uploadImage}>
-          Upload
-        </button>
+        <button className="add-new-product-button" onClick={uploadImage}>Upload</button>
         <input
           onChange={(e) => {
             setprice(e.target.value);
@@ -114,10 +109,10 @@ const AddNewProduct = () => {
           type="number"
           placeholder="price"
         />
-        <button
-          className="add-new-product-button"
+        <button className="add-new-product-button"
           onClick={() => {
             addProduct();
+          
           }}
         >
           ADD

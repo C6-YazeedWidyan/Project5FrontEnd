@@ -7,7 +7,7 @@ const Store = () => {
   const [products, setProducts] = useState([]);
   const getCategories = () => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/category`)
+      .get(`http://localhost:5000/category`)
       .then((data) => {
         setCategories(data.data.result);
       })
@@ -18,7 +18,7 @@ const Store = () => {
 
   const getProductsByCategory = (id) => {
     axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/${id}`)
+      .get(`http://localhost:5000/product/catgory/${id}`)
       .then((data) => {
         setProducts(data.data.result);
       })
@@ -30,7 +30,7 @@ const Store = () => {
     getCategories();
 
     axios
-      .get(`https://bluelockgeeks.onrender.com/product/catgory/1`)
+      .get(`http://localhost:5000/product/catgory/1`)
       .then((data) => {
         setProducts(data.data.result);
       })

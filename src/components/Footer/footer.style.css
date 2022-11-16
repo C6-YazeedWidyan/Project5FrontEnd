@@ -7,9 +7,14 @@
 .upper-footer{
     display:grid;
     grid-template-columns: repeat(3, 20%);
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #0047ab;
     color: white;
+    padding-bottom:2em;
+    padding-left: 2em;
+}
+.lower-footer{
+    align-self: center;
 }
 .f-logo{
 
@@ -20,6 +25,7 @@
 .f-follow-us{
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
 .f-social-icons-container{
     display: grid;
@@ -51,17 +57,24 @@
     .upper-footer{
         display:grid;
         grid-template-columns: repeat(1, 30%);
-        justify-content: space-evenly;
+        justify-content: space-between;
         background-color: #0047ab;
         color: white;
+        padding-bottom:2em;
+        padding-left: 2em;
+        padding-right: 3em;
     }
 } 
 @media  (min-width: 600px) and (max-width:900px) {
     .upper-footer{
         display:grid;
         grid-template-columns: repeat(2, 30%);
-        justify-content: space-evenly;
+        justify-content: space-between;
         background-color: #0047ab;
         color: white;
+        padding-bottom:2em;
+        padding-left: 2em;
+        padding-right: 3em;
+
     }
 }

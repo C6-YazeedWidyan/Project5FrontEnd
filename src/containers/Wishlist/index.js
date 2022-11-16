@@ -21,7 +21,7 @@ const Wishlist = () => {
 
     if (wishlist.length === 0) {
       axios
-        .get("https://bluelockgeeks.onrender.com/wishlist", {
+        .get("http://localhost:5000/wishlist", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -37,7 +37,7 @@ const Wishlist = () => {
 
   const deleteFromWishList = (id) => {
     axios
-      .delete(`https://bluelockgeeks.onrender.com/wishlist/${id}`, {
+      .delete(`http://localhost:5000/wishlist/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

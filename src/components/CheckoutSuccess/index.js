@@ -14,7 +14,7 @@ const CheckoutSuccess = () => {
 
   useEffect(() => {
     axios
-      .delete(`https://bluelockgeeks.onrender.com/cart/`, {
+      .delete(`http://localhost:5000/cart/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

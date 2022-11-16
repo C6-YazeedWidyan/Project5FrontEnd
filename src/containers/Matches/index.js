@@ -12,7 +12,7 @@ const Matches = () => {
 
   useEffect(() => {
     axios
-      .get("https://bluelockgeeks.onrender.com/match")
+      .get("http://localhost:5000/match")
       .then((res) => {
         setMatches(res.data.result);
         console.log(res.data.result);
@@ -22,7 +22,7 @@ const Matches = () => {
       });
 
     axios
-      .get(`https://bluelockgeeks.onrender.com/match/number/2`)
+      .get(`http://localhost:5000/match/number/2`)
       .then((res) => {
         console.log(res.data.result);
       })
