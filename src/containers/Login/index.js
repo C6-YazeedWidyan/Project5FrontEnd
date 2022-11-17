@@ -24,11 +24,6 @@ const Login = () => {
   }, []);
 
   const onSuccess = (response) => {
-    // setFirstName(response.wt.rV)
-    // setLastName(response.wt.uT)
-    // setEmailgoogle(response.wt.cu)
-    // console.log(response.tokenId);
-
     axios
       .post("http://localhost:5000/user/google", {
         firstName: response.wt.rV,
@@ -62,7 +57,6 @@ const Login = () => {
             },
           })
           .then((res) => {
-            console.log("mmmmmmmmm");
             dispatch(setWishlist(res.data.result));
           })
           .catch((err) => {
@@ -78,34 +72,12 @@ const Login = () => {
   const onFailure = (response) => {
     console.log("FAILED", response);
   };
-  const onLogoutSuccess = () => {
-    console.log("SUCESS LOG OUT");
-  };
-
   const state = useSelector(getIsLoggedIn);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setmessage] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [emailgoogle, setEmailgoogle] = useState("");
-  const addNewUserByGoogle = () => {
-    console.log("test");
-    axios
-      .post("http://localhost:5000/user/google", {
-        firstName,
-        lastName,
-        email: emailgoogle,
-      })
-      .then((result) => {
-        console.log(result.data.massage);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  };
   const login = () => {
     axios
       .post("http://localhost:5000/login", {
@@ -138,7 +110,6 @@ const Login = () => {
             },
           })
           .then((res) => {
-            console.log("mmmmmmmmm");
             dispatch(setWishlist(res.data.result));
           })
           .catch((err) => {
@@ -156,42 +127,22 @@ const Login = () => {
         setmessage(err.response.data.message);
       });
   };
-  const googlelogin = () => {
-    axios
-      .post("http://localhost:5000/login/google", {
-        email: emailgoogle,
-        password: 123,
-      })
-      .then((result) => {
-        dispatch(setLogin(result.data.token));
-        dispatch(setUserId(result.data.userId));
-        dispatch(setUserType(result.data.role));
-        if (result.data.role == 1) {
-          navigate("/");
-        } else if (result.data.role == 2) {
-          navigate("/admin/dashboard");
-        }
-      })
-      .catch((err) => {
-        console.log(err.response.data.message);
-        setmessage(err.response.data.message);
-      });
-  };
+
   return (
     <>
       <div className="login-container">
-        <p>login</p>
+        <p>Login</p>
         <input
           className="auth-input"
           type="email"
-          placeholder="Email"
+          placeholder="EMAIL"
           onChange={(e) => setEmail(e.target.value)}
         />
         <br />
         <input
           className="auth-input"
           type="password"
-          placeholder="Password"
+          placeholder="PASSWORD"
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
@@ -203,6 +154,7 @@ const Login = () => {
         >
           Login
         </button>
+
         <div>
           <GoogleLogin
             clientId={clientId}

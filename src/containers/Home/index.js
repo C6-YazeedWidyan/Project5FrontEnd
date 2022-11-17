@@ -110,7 +110,6 @@ const Home = () => {
     getKidsItems();
 
     if (token && cart.length === 0) {
-      console.log("yazeed ssssssssss");
       axios
         .get("http://localhost:5000/cart", {
           headers: {
@@ -118,7 +117,6 @@ const Home = () => {
           },
         })
         .then((res) => {
-          console.log("ssss");
           dispatch(setCart(res.data.result));
         })
         .catch((err) => {
@@ -127,7 +125,6 @@ const Home = () => {
     }
 
     if (token && wishlist.length === 0) {
-      console.log("yazeed fffffffffff");
       axios
         .get("http://localhost:5000/wishlist", {
           headers: {
@@ -135,7 +132,6 @@ const Home = () => {
           },
         })
         .then((res) => {
-          console.log("mmmmmmmmm");
           dispatch(setWishlist(res.data.result));
         })
         .catch((err) => {
@@ -182,7 +178,7 @@ const Home = () => {
                     />
                     <div>
                       <div className="product-item-title">{product.title}</div>
-                      <div className="product-item-price">${product.price}</div>
+                      <div className="product-item-price">{product.price}$</div>
                     </div>
                     {cart.find((item) => item.id === product.id) ? (
                       <button
@@ -240,7 +236,7 @@ const Home = () => {
                     />
                     <div>
                       <div className="product-item-title">{product.title}</div>
-                      <div className="product-item-price">${product.price}</div>
+                      <div className="product-item-price">{product.price}$</div>
                     </div>
                     {cart.find((item) => item.id === product.id) ? (
                       <button
@@ -302,7 +298,7 @@ const Home = () => {
                           {product.title}
                         </div>
                         <div className="product-item-price">
-                          ${product.price}
+                          {product.price}$
                         </div>
                       </div>
                       {cart.find((item) => item.id === product.id) ? (

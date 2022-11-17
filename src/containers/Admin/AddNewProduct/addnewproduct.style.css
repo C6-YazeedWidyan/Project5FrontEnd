@@ -1,28 +1,45 @@
-.add-new-product-contianer{
-    display: grid;
+.add-new-product-contianer {
+  display: grid;
+  margin-left: 100px;
+
 }
- .add-new-product-input{
-    border-radius: 4px;
-    border: solid 1px hsl(0, 0%, 80%);
-    padding: 12px;
-    width: 90%;
-  } 
- .add-new-product-textarea{
-    border-radius: 4px;
-    border: solid 1px hsl(0, 0%, 80%);
-    padding: 12px;
-    width: 87%;
-    height: 100px;
-  } 
-.add-new-product-button{
-    background-color: #7fd410;
-    border: none;
-    border-radius: 4px;
-    padding: 12px;
-    color: white;
-    min-width: 21%;
-  }
-  .add-new-product-button:hover {
-    cursor: pointer;
-    color: rgb(241, 24, 24);
-  }
+.add-new-product-title{
+  font-size: 20px;
+}
+.add-new-product-input {
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  padding: 12px;
+  width: 50%;
+  margin-bottom: 10px;
+
+}
+/* .add-new-product-textarea {
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  padding: 12px;
+  width: 87%;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom:10px;
+} */
+.add-new-product-button {
+  background-color: #2442e9;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: white;
+  width: 0%; 
+  min-width: 21%;
+}
+.add-new-product-button:hover {
+  cursor: pointer;
+
+}
+
+.img{
+  width: 200px;
+  height: 200px;
+}

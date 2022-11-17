@@ -6,13 +6,7 @@ import {
 } from "../../redux/reducers/wishlist";
 import { addItemToCart } from "../../redux/reducers/cart";
 import { deleteItemFromCart } from "../../redux/reducers/cart";
-import {
-  FaShoppingCart,
-  FaHeart,
-  FaMinus,
-  FaPlus,
-  FaRegHeart,
-} from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaRegHeart } from "react-icons/fa";
 import "./productDetails.style.css";
 import { getToken, getUserId } from "../../redux/selectors/auth.selectors";
 import { useSelector, useDispatch } from "react-redux";
@@ -28,9 +22,6 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
   const [inStock, setInStock] = useState(0);
-  console.log(inStock);
-  console.log(product);
-
   const [inWishlist, setInWishlist] = useState(false);
   const [inCart, setInCart] = useState(false);
   const token = useSelector(getToken);
@@ -155,7 +146,7 @@ const ProductDetails = () => {
           </div>
           <div className="card">
             <div className="title-product">{product.title}</div>
-            <div className="product-price">{product.price}JD</div>
+            <div className="product-price">{product.price}$</div>
             <div>
               <div className="specs-wrapper">
                 <div className="specs-name">Brand:</div>
@@ -176,15 +167,6 @@ const ProductDetails = () => {
               {product.descriptions}
             </div>
             <div className="action-wrapper">
-              {/* <div className="quantity-select">
-                <div className="quantity-action" onClick={decreament}>
-                  <FaMinus />
-                </div>
-                <div className="quantity-count">{quantity}</div>
-                <div className="quantity-action" onClick={increament}>
-                  <FaPlus />
-                </div>
-              </div> */}
               {inCart ? (
                 <button
                   className="btn"

@@ -19,9 +19,9 @@ const Header = () => {
   const token = useSelector(getToken);
   const cart = useSelector(getCart);
   const wishList = useSelector(getWishlist);
-  const [place, setPlace] = useState("");
-  const [time, setTime] = useState("");
-  const [temp, settemp] = useState("");
+  // const [place, setPlace] = useState("");
+  // const [time, setTime] = useState("");
+  // const [temp, settemp] = useState("");
   const logout = () => {
     dispatch(setLogout(false));
     dispatch(setCart([]));
@@ -34,10 +34,10 @@ const Header = () => {
         "http://api.weatherstack.com/current?access_key=4a61273807556cf152cdd7018185baed&query=Amman"
       )
       .then((response) => {
-        console.log(response.data.current.temperature);
-        setPlace(response.data.location.name);
-        setTime(response.data.location.localtime);
-        settemp(response.data.current.temperature);
+        // console.log(response.data.current.temperature);
+        // setPlace(response.data.location.name);
+        // setTime(response.data.location.localtime);
+        // settemp(response.data.current.temperature);
       })
       .catch((err) => {
         console.log(err);
@@ -45,7 +45,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    clock();
+    // clock();
   }, []);
   const goToWishlist = () => {
     navigate("/wishlist");

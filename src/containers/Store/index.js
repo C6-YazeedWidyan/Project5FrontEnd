@@ -59,15 +59,12 @@ const Store = () => {
       <div className="products-container">
         {products.map((product, i) => {
           return (
-            <div className="products">
-              <img
-                className="product-img-store"
-                src={product.img}
-                alt={product.title}
-              />
-              <h2 className="product-item-title">{product.title}</h2>
-              <h5 className="desc">{product.descriptions}</h5>
-              <h5 className="product-item-price">{product.price}$</h5>
+            <div className="products-border">
+              <div className="products">
+                <img className="product-img-store" src={product.img}></img> 
+                <h5 className="desc">{product.descriptions}</h5>
+                <h5 className="product-item-price">{product.price}$</h5>
+              </div>
             </div>
           );
         })}

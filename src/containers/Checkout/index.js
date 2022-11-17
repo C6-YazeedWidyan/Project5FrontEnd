@@ -21,12 +21,10 @@ const Checkout = () => {
         console.log(err);
       });
   };
-
   useEffect(() => {
     handleCheckout();
   }, []);
 
-  console.log("yaz");
   return (
     <>
       <div className="checkout"></div>;
