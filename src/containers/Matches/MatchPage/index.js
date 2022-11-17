@@ -23,7 +23,7 @@ const MatchPage = () => {
         console.log(err);
       });
   }, []);
-  console.log("asd");
+ 
   return (
     <>
       <div className="match-container">

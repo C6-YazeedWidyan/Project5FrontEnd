@@ -15,7 +15,7 @@ const Matches = () => {
       .get("http://localhost:5000/match")
       .then((res) => {
         setMatches(res.data.result);
-        console.log(res.data.result);
+     
       })
       .catch((err) => {
         console.log(err);

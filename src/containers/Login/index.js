@@ -31,7 +31,7 @@ const Login = () => {
         email: response.wt.cu,
       })
       .then((result) => {
-        console.log(result);
+      
         dispatch(setLogin(result.data.token));
         dispatch(setUserId(result.data.userId));
         dispatch(setUserType(1));
@@ -43,7 +43,7 @@ const Login = () => {
             },
           })
           .then((res) => {
-            console.log("ssss");
+           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {
@@ -96,7 +96,7 @@ const Login = () => {
             },
           })
           .then((res) => {
-            console.log("ssss");
+           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {

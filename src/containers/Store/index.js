@@ -45,7 +45,7 @@ const Store = () => {
         {categories.map((categories, i) => {
           return (
             <div key={i}>
-              {console.log(categories)}
+              {}
               <button
                 className="categories-button"
                 onClick={() => getProductsByCategory(categories.id)}

@@ -28,25 +28,25 @@ const Header = () => {
     dispatch(setWishlist([]));
     navigate("/login");
   };
-  const clock = () => {
-    axios
-      .get(
-        "http://api.weatherstack.com/current?access_key=4a61273807556cf152cdd7018185baed&query=Amman"
-      )
-      .then((response) => {
-        // console.log(response.data.current.temperature);
-        // setPlace(response.data.location.name);
-        // setTime(response.data.location.localtime);
-        // settemp(response.data.current.temperature);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const clock = () => {
+  //   axios
+  //     .get(
+  //       "http://api.weatherstack.com/current?access_key=4a61273807556cf152cdd7018185baed&query=Amman"
+  //     )
+  //     .then((response) => {
+  //       // console.log(response.data.current.temperature);
+  //       // setPlace(response.data.location.name);
+  //       // setTime(response.data.location.localtime);
+  //       // settemp(response.data.current.temperature);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
-  useEffect(() => {
-    // clock();
-  }, []);
+  // useEffect(() => {
+  //   // clock();
+  // }, []);
   const goToWishlist = () => {
     navigate("/wishlist");
   };

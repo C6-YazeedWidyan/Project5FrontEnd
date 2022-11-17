@@ -33,7 +33,7 @@ const Register = () => {
         role_id,
       })
       .then((result) => {
-        console.log(result.data);
+       
         getToken()
         setmessage(result.data.massage);
       })
@@ -61,7 +61,7 @@ const getToken=()=>{
             },
           })
           .then((res) => {
-            console.log("ssss");
+           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {

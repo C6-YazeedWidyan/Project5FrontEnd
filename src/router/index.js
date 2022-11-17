@@ -58,6 +58,4 @@ const Router = () => {
   );
 };
 
-console.log("adasd");
-
 export default Router;
