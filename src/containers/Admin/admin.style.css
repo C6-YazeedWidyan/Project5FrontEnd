@@ -51,6 +51,7 @@ main {
 }
 
 .admin-Navbar-Link {
+  cursor: pointer;
   padding-right: 8px;
 }
 .admin-Navbar-Items {

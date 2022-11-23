@@ -18,7 +18,7 @@ const Footer = () => {
           <p className="paragraphs-infos">Phone : 012 3456 789</p>
           <a
             className="link-to-contact"
-            href={"https://bluelockgeeks.vercel.app/contactUs"}
+            href={"http://localhost:3000/contactUs"}
           >
             Click here to write us
           </a>

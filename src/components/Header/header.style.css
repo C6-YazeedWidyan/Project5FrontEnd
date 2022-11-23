@@ -135,7 +135,54 @@
   left: 11px;
   top: -7px;
 }
+.dark {
+  background-color:#2d2d2d;
+  color: #fff;
+}
+.light {
+  /* background-color: #fff; */
+  color:#999
+}
+.dark  button{
+  color: rgb(252, 247, 247);
+  background-color: #0047ab
+}
+.dark div{
+  color: #fff;
+}
+.dark .upper-footer{
+background-color: #333;
+}
+.dark .cart-card{
+  background-color: #0000005e
+}
+#ig{
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+}
+.dark .top-header-wrapper {
+ border-bottom:  6px solid #0047ab
+}
+.dark .cart-count-indicator {
+  background-color: #0047ab
+}
+.dark .desc {
+  color: white
+}
+.dark .current-name{
+  color: #63a375;
+}
+.dark .search-card-title{
+  color: #0047ab
 
+}
+.dark .cart-outline-btn{
+  color: red;
+}
+.dark .cart-checkout-btn:hover{
+  background-color: #0047ab
+}
 @media (max-width: 600px) {
   .bottom-header-wrapper {
     display: block;

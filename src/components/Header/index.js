@@ -19,6 +19,7 @@ const Header = () => {
   const token = useSelector(getToken);
   const cart = useSelector(getCart);
   const wishList = useSelector(getWishlist);
+  const [dark, setdark] = useState(false)
   // const [place, setPlace] = useState("");
   // const [time, setTime] = useState("");
   // const [temp, settemp] = useState("");
@@ -28,6 +29,20 @@ const Header = () => {
     dispatch(setWishlist([]));
     navigate("/login");
   };
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      setdark(true)
+    } else {
+      setTheme('light');
+      setdark(false)
+    }
+  }
+  
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
   // const clock = () => {
   //   axios
   //     .get(
@@ -78,6 +93,12 @@ const Header = () => {
           <div>Hotline : +123 456 7890</div>
           <div>|</div>
           <div>Welcome to Blue Lock</div>
+          <div className={`App ${theme}`}>
+      <div onClick={toggleTheme}>{dark? <img src="https://img.icons8.com/color/30/000000/summer--v1.png"/>:<img src="https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png"/>}
+       
+        </div>
+   
+    </div>
           {/* <div>
             {place}
             <br></br>

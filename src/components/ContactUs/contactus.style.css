@@ -54,3 +54,15 @@
 .contact-us-send-btn:hover {
   background-color: #a7aaae;
 }
+
+@media (max-width: 600px) {
+  .contact-us {
+    width: 370px;
+}
+}
+
+@media (min-width: 600px) and (max-width: 900px){
+  .contact-us {
+    width: 430px;
+}
+}

@@ -72,7 +72,7 @@ const Wishlist = () => {
                     />
                     <div>
                       <h3>{product.title}</h3>
-                      <h3>{product.price}</h3>
+                      <h3>{product.price}$</h3>
                     </div>
                     <button
                       className="remove-from-wish-list-btn"

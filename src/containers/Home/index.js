@@ -141,7 +141,6 @@ const Home = () => {
   }, []);
 
   const goToDetails = (id) => {
-    console.log(id);
     navigate("/productdetails", {
       state: id,
     });
