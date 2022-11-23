@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/webstatus/users", {
+      .get("https://bluelockgeeks.onrender.com/webstatus/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -26,7 +26,7 @@ const Dashboard = () => {
       });
 
     axios
-      .get("http://localhost:5000/webstatus/products", {
+      .get("https://bluelockgeeks.onrender.com/webstatus/products", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ const Dashboard = () => {
       });
 
     axios
-      .get("http://localhost:5000/webstatus/orders", {
+      .get("https://bluelockgeeks.onrender.com/webstatus/orders", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

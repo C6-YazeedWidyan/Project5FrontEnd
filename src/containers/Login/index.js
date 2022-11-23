@@ -25,25 +25,23 @@ const Login = () => {
 
   const onSuccess = (response) => {
     axios
-      .post("http://localhost:5000/user/google", {
+      .post("https://bluelockgeeks.onrender.com/user/google", {
         firstName: response.wt.rV,
         lastName: response.wt.uT,
         email: response.wt.cu,
       })
       .then((result) => {
-      
         dispatch(setLogin(result.data.token));
         dispatch(setUserId(result.data.userId));
         dispatch(setUserType(1));
 
         axios
-          .get("http://localhost:5000/cart", {
+          .get("https://bluelockgeeks.onrender.com/cart", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
           })
           .then((res) => {
-           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {
@@ -51,7 +49,7 @@ const Login = () => {
           });
 
         axios
-          .get("http://localhost:5000/wishlist", {
+          .get("https://bluelockgeeks.onrender.com/wishlist", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -80,7 +78,7 @@ const Login = () => {
   const [message, setmessage] = useState("");
   const login = () => {
     axios
-      .post("http://localhost:5000/login", {
+      .post("https://bluelockgeeks.onrender.com/login", {
         email,
         password,
       })
@@ -90,13 +88,12 @@ const Login = () => {
         dispatch(setUserType(result.data.role));
 
         axios
-          .get("http://localhost:5000/cart", {
+          .get("https://bluelockgeeks.onrender.com/cart", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
           })
           .then((res) => {
-           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {
@@ -104,7 +101,7 @@ const Login = () => {
           });
 
         axios
-          .get("http://localhost:5000/wishlist", {
+          .get("https://bluelockgeeks.onrender.com/wishlist", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },

@@ -1,15 +1,15 @@
 import "./register.style.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useSelector , useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { setLogin, setUserId, setUserType } from "../../redux/reducers/auth";
 import { getIsLoggedIn } from "../../redux/selectors/auth.selectors";
 import React, { useState } from "react";
 import { setCart } from "../../redux/reducers/cart";
 import { setWishlist } from "../../redux/reducers/wishlist";
 const Register = () => {
-  const navigate=useNavigate()
-   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState(0);
@@ -20,10 +20,10 @@ const Register = () => {
   const role_id = 1;
   const [message, setmessage] = useState("");
   const state = useSelector(getIsLoggedIn);
-  const [pass, setPass] = useState(false)
+  const [pass, setPass] = useState(false);
   const addNewUser = () => {
     axios
-      .post("http://localhost:5000/user", {
+      .post("https://bluelockgeeks.onrender.com/user", {
         firstName,
         lastName,
         age,
@@ -33,8 +33,7 @@ const Register = () => {
         role_id,
       })
       .then((result) => {
-       
-        getToken()
+        getToken();
         setmessage(result.data.massage);
       })
       .catch((err) => {
@@ -43,9 +42,9 @@ const Register = () => {
       });
   };
   ////////////////////////////////////
-const getToken=()=>{
-  axios
-      .post("http://localhost:5000/login", {
+  const getToken = () => {
+    axios
+      .post("https://bluelockgeeks.onrender.com/login", {
         email,
         password,
       })
@@ -55,13 +54,12 @@ const getToken=()=>{
         dispatch(setUserType(result.data.role));
 
         axios
-          .get("http://localhost:5000/cart", {
+          .get("https://bluelockgeeks.onrender.com/cart", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
           })
           .then((res) => {
-           
             dispatch(setCart(res.data.result));
           })
           .catch((err) => {
@@ -69,7 +67,7 @@ const getToken=()=>{
           });
 
         axios
-          .get("http://localhost:5000/wishlist", {
+          .get("https://bluelockgeeks.onrender.com/wishlist", {
             headers: {
               Authorization: `Bearer ${result.data.token}`,
             },
@@ -91,8 +89,7 @@ const getToken=()=>{
         console.log(err.response.data.message);
         setmessage(err.response.data.message);
       });
- };
-
+  };
 
   return (
     <>
@@ -154,28 +151,27 @@ const getToken=()=>{
               placeholder="CONFIRM-PASSWORD"
               onChange={(e) => {
                 setrepass(e.target.value);
-               
-            
-          
               }}
             />
-            {!pass&&password == "" && repass == "" ? (
+            {!pass && password == "" && repass == "" ? (
               <p></p>
-            ) : (pass&&
-              <div>
-                {password == repass ? (
-                  <p className="succes-msg">PASSWORD MATCHED</p>
-                ) : (
-                  <p className="error-msg">WRONG PASSWORD</p>
-                )}
-              </div>
+            ) : (
+              pass && (
+                <div>
+                  {password == repass ? (
+                    <p className="succes-msg">PASSWORD MATCHED</p>
+                  ) : (
+                    <p className="error-msg">WRONG PASSWORD</p>
+                  )}
+                </div>
+              )
             )}
 
             <button
               className="register-btn"
               onClick={() => {
                 addNewUser();
-                setPass(true)
+                setPass(true);
               }}
             >
               Register

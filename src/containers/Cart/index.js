@@ -22,7 +22,7 @@ const Cart = () => {
 
     if (cart.length === 0) {
       axios
-        .get("http://localhost:5000/cart", {
+        .get("https://bluelockgeeks.onrender.com/cart", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -44,7 +44,7 @@ const Cart = () => {
 
   const deleteFromCart = (id) => {
     axios
-      .delete(`http://localhost:5000/cart/${id}`, {
+      .delete(`https://bluelockgeeks.onrender.com/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

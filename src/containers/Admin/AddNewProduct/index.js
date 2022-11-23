@@ -14,7 +14,7 @@ const AddNewProduct = () => {
   const [show, setshow] = useState(false);
   const addProduct = () => {
     axios
-      .post(`http://localhost:5000/product/add`, {
+      .post(`https://bluelockgeeks.onrender.com/product/add`, {
         title,
         descriptions,
         category_id,
@@ -61,7 +61,6 @@ const AddNewProduct = () => {
           placeholder="title"
         />
         <input
-           
           className="add-new-product-input"
           onChange={(e) => {
             setdescriptions(e.target.value);
@@ -77,7 +76,8 @@ const AddNewProduct = () => {
           type="number"
           placeholder="catagory"
         />
-            <input className="add-new-product-input"
+        <input
+          className="add-new-product-input"
           onChange={(e) => {
             setprice(e.target.value);
           }}
@@ -96,15 +96,18 @@ const AddNewProduct = () => {
           }}
         />
 
-        {show&& <img className="img" src={url} />}
-       
-        <button className="add-new-product-button" onClick={()=>{
-          uploadImage()
-          setshow(true)
-        }}>
+        {show && <img className="img" src={url} />}
+
+        <button
+          className="add-new-product-button"
+          onClick={() => {
+            uploadImage();
+            setshow(true);
+          }}
+        >
           Upload
         </button>
-    
+
         <button
           className="add-new-product-button"
           onClick={() => {

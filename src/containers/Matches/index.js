@@ -12,17 +12,16 @@ const Matches = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/match")
+      .get("https://bluelockgeeks.onrender.com/match")
       .then((res) => {
         setMatches(res.data.result);
-     
       })
       .catch((err) => {
         console.log(err);
       });
 
     axios
-      .get(`http://localhost:5000/match/number/2`)
+      .get(`https://bluelockgeeks.onrender.com/match/number/2`)
       .then((res) => {
         console.log(res.data.result);
       })
