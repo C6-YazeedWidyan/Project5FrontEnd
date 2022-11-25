@@ -4,7 +4,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-#font{
+#font {
   color: rgb(25, 0, 255);
 }
 .cart-wrapper {
@@ -44,11 +44,11 @@
 .cart-card-title {
   font-size: 18px;
   margin-bottom: 12px;
-  color: #090909;
+  color: #fffcfc;
 }
 .cart-card-price {
   font-size: 14px;
-  color: #090909;
+  color: #fffcfc;
 }
 .cart-outline-btn {
   cursor: pointer;
