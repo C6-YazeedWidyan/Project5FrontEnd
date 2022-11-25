@@ -171,10 +171,10 @@ background-color: #333;
   color: white
 }
 .dark .current-name{
-  color: #63a375;
+  color: #0047ab;
 }
 .dark .search-card-title{
-  color: #0047ab
+  color: #0047ab;
 
 }
 .dark .cart-outline-btn{
@@ -191,5 +191,8 @@ background-color: #333;
 
   .bottom-header-right-wrapper {
     padding-top: 22px;
+  }
+  #icon{
+   padding: 10px 1rem;
   }
 }

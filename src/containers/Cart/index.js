@@ -80,7 +80,9 @@ const Cart = () => {
                         />
                         <div className="cart-card-text">
                           <div className="cart-card-title">{product.title}</div>
-                          <div className="cart-card-price">{product.price}</div>
+                          <div className="cart-card-price">
+                            {product.price}$
+                          </div>
                         </div>
                       </div>
 
@@ -98,9 +100,9 @@ const Cart = () => {
               </div>
               <div className="cart-right-wrapper">
                 <div className="cart-summary-title">Products Summary</div>
-                <div className="cart-total-details">
+                <div className="cart-total-details" id="font">
                   <div>Total</div>
-                  <div>${grandTotal(cart)}</div>
+                  <div>{grandTotal(cart)}$</div>
                 </div>
                 <div
                   className="cart-checkout-btn"

@@ -56,7 +56,7 @@ const EditProductDialog = ({
           >
             <div className="product-form-wrapper">
               <div className="product-form-left">
-                <label>Tilte:</label>
+                <label>Title:</label>
                 <br />
                 <input
                   className="input-field"
@@ -80,7 +80,7 @@ const EditProductDialog = ({
                   }}
                 />
                 <br />
-                <label>descriptions:</label>
+                <label>Description:</label>
                 <br />
                 <textarea
                   className="input-textarea"
